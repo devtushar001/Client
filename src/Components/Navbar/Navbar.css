@@ -69,7 +69,7 @@
     }
 
     .navbar .logo {
-    height: 65px;
-    overflow: hidden;
-}
+        height: 65px;
+        overflow: hidden;
+    }
 }
