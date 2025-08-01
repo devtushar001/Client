@@ -21,30 +21,30 @@ export const Navbar = () => {
             {/* Menu Links */}
             <div className="dropdown">
                 <Link to="/checklist" className="menu-list link">
-                    <MdChecklistRtl size={50} />
+                    <MdChecklistRtl className="icons" />
                     <span>Check List</span>
                 </Link>
 
                 <Link to="/update-stock" className="menu-list link">
-                    <CgArrowsExchangeAlt size={50} />
+                    <CgArrowsExchangeAlt className="icons" />
                     <span>Update Stock</span>
                 </Link>
 
                 <Link to="/add-item" className="menu-list link">
-                    <IoIosAdd size={50} />
+                    <IoIosAdd className="icons" />
                     <span>Add Items</span>
                 </Link>
 
                 {login ? (
-                    <div className="menu-list signup">
-                        <RiUser6Line size={50} />
+                    <Link to="/my-profile" className="menu-list link">
+                        <RiUser6Line className="icons" />
                         <span>User ID</span>
-                    </div>
+                    </Link>
                 ) : (
-                    <div onClick={() => setLogin(true)} className="menu-list login">
-                        <AiOutlineLogin size={50} />
+                    <Link to="/sign-up" onClick={() => setLogin(true)} className="menu-list link">
+                        <AiOutlineLogin className="icons" />
                         <span>Sign In</span>
-                    </div>
+                    </Link>
                 )}
             </div>
         </div>

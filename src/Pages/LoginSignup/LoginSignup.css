@@ -1,0 +1,67 @@
+/* Login Signup CSS */
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background: #1313134d;
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+.signup .sign-up-container {
+    width: 540px;
+    height: 440px;
+    background: #000000a9;
+    backdrop-filter: blur(50px);
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.signup .sign-up-container .signup-input {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup .sign-up-container .signup-input input {
+    flex: 1;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-left: 10px;
+    max-height: 35px;
+    height: 35px;
+    color: #fff;
+}
+
+.signup .sign-up-container .signup-input button {
+    min-width: 120px;
+    max-height: 35px;
+    height: 35px;
+    border: 1px solid #008cddff;
+    cursor: pointer;
+    color: #ffffff;
+    background: #008cddff;
+}
+
+@media (max-width: 650px) {
+    .signup .sign-up-container {
+        max-width: 350px;
+    }
+
+    .signup .sign-up-container .signup-input {
+        flex-direction: column;
+    }
+
+    .signup .sign-up-container .signup-input button {
+        flex: 1;
+        height: 35px;
+    }
+}
