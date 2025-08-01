@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    border-bottom: 1px solid gray;
+    background: #000;
+}
+
+.navbar .logo {
+    height: 90px;
+    overflow: hidden;
+}
+
+.navbar .logo img {
+    height: 100%;
+}
+
+.navbar .dropdown {
+    width: 100vw;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #c4c4c4;
+}
+
+.navbar .dropdown .menu-list {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    transition: all ease-in 0.2s;
+    color: #fff;
+}
+
+.navbar .dropdown .menu-list:hover {
+    color: rgb(0, 87, 128);
+}
