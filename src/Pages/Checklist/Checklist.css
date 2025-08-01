@@ -1,0 +1,90 @@
+.checklist {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 30px;
+    box-sizing: border-box;
+    padding: 0px 50px;
+}
+
+.checklist .recently-updated {
+    background: #fbfeff;
+}
+
+.checklist .recently-updated .table {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+}
+
+.checklist .low-stock .table {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+}
+
+.checklist .recently-updated .table .table-head {
+    font-weight: bold;
+    background: #000000;
+    color: #ffff;
+}
+
+.checklist .recently-updated .table .table-head,
+.checklist .recently-updated .table .table-contant {
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 1.5fr 0.3fr 0.6fr 0.7fr;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    padding: 5px;
+    gap: 5px;
+}
+
+.checklist .recently-updated .table .table-head .head,
+.checklist .recently-updated .table .table-contant .content {
+    border-radius: 10px;
+}
+
+.checklist .low-stock .table .table-head,
+.checklist .low-stock .table .table-contant {
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 1fr 0.2fr;
+    padding: 5px;
+    /* gap: 5px; */
+
+}
+
+.checklist .low-stock .table .table-head .head {
+    background: #ff4800;
+    padding: 3px;
+    color: #fff;
+}
+
+.checklist .low-stock .table .table-head .head,
+.checklist .low-stock .table .table-contant .content {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ff4800;
+}
+
+.checklist .low-stock .table .table-contant .content {
+    color: #ff4800;
+}
+
+.checklist .low-stock .table .table-head .head {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .checklist {
+        font-size: 11px;
+    }
+}

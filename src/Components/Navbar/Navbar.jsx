@@ -3,40 +3,50 @@ import { assets } from "../../Assets/Assets";
 import { MdChecklistRtl } from "react-icons/md";
 import { CgArrowsExchangeAlt } from "react-icons/cg";
 import { IoIosAdd } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa6";
+import { RiUser6Line } from "react-icons/ri";
 import { AiOutlineLogin } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import './Navbar.css';
 
 export const Navbar = () => {
-    const [login, setLogin] = useState(false)
+    const [login, setLogin] = useState(false);
+
     return (
-        <>
-            <div className="navbar">
-                <div className="logo">
-                    <img src={assets.logoTwo} alt="" />
-                </div>
-                <div className="dropdown">
-                    <div className="checklist menu-list">
-                        <MdChecklistRtl size={50} />
-                        <span>Check List</span>
+        <div className="navbar">
+            {/* Logo */}
+            <div className="logo">
+                <img src={assets.logoTwo} alt="Logo" />
+            </div>
+
+            {/* Menu Links */}
+            <div className="dropdown">
+                <Link to="/checklist" className="menu-list link">
+                    <MdChecklistRtl size={50} />
+                    <span>Check List</span>
+                </Link>
+
+                <Link to="/update-stock" className="menu-list link">
+                    <CgArrowsExchangeAlt size={50} />
+                    <span>Update Stock</span>
+                </Link>
+
+                <Link to="/add-item" className="menu-list link">
+                    <IoIosAdd size={50} />
+                    <span>Add Items</span>
+                </Link>
+
+                {login ? (
+                    <div className="menu-list signup">
+                        <RiUser6Line size={50} />
+                        <span>User ID</span>
                     </div>
-                    <div className="update-stock menu-list">
-                        <CgArrowsExchangeAlt size={50} />
-                        <span>Update Stock</span>
-                    </div>
-                    <div className="add-new-item menu-list">
-                        <IoIosAdd size={50} />
-                        <span>Add Items</span>
-                    </div>
-                    {login ? <div className="signup menu-list">
-                        <FaRegUser size={50} />
-                        <span>User Id</span>
-                    </div> : <div className="login menu-list">
+                ) : (
+                    <div onClick={() => setLogin(true)} className="menu-list login">
                         <AiOutlineLogin size={50} />
                         <span>Sign In</span>
-                    </div>}
-                </div>
+                    </div>
+                )}
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
