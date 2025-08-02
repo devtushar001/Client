@@ -56,6 +56,7 @@
     .add-products {
         font-size: 16px;
     }
+
     .add-products .container .input-data {
         grid-template-columns: 1fr;
     }
@@ -64,9 +65,10 @@
 }
 
 @media (max-width: 500px) {
-     .add-products {
+    .add-products {
         font-size: 12px;
     }
+
     .add-products .container .input-data .input {
         grid-template-columns: 1fr;
     }
